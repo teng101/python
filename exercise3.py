@@ -9,3 +9,11 @@ while True:
     if a == "y":
         break
 print(shopping_list)
+
+while True:
+    remove = input("Remove item:")
+    if remove not in shopping_list:
+        break
+    else:
+        shopping_list.remove(remove)
+print(shopping_list)
