@@ -1,15 +1,23 @@
 # remove the vowels from the string
 vowels = ["a","e","i","o","u","A","E","I","O","U"]
 my_string = str(input())
-"""new_string = list()
+new_string = ""
 
 for i in my_string:
-    if i in vowels:
-        continue
-    else:
-        new_string.append(i)
-print(" ".join(new_string))
-"""
-new_string = [i for i in my_string if i not in vowels]
+    if i not in vowels:
+        new_string += i
+print(new_string)
 
-print(" ".join(new_string))
+"""
+my_list = [i for i in my_string if i not in vowels]
+another_string = " ".join(my_list)
+
+print(another_string)
+"""
+my_list = list(new_string.split())
+print(my_list)
+
+new_list = [len(i) for i in my_list]
+print(new_list)
+
+    
