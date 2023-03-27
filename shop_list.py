@@ -7,7 +7,9 @@ while True:
         break
     amt = input("Add an amount:")
     my_dict[item] = amt
-del my_dict[""]
+
+if "" in my_dict:
+    del my_dict[""]
         
 print(f"Your list: {my_dict}")
 
