@@ -4,6 +4,9 @@ class ShoppingList:
 
     def add_item(self, item_name, item_amt):
         self.items[item_name] = item_amt
+        # Remove any empty keys from the dictionary
+        if "" in my_list.items:
+            my_list.delete_item("")
 
     def delete_item(self, item_name):
         if item_name in self.items:
@@ -29,10 +32,6 @@ while True:
         break
     amt = input("Add an amount: ")    
     my_list.add_item(item, amt)
-
-# Remove any empty keys from the dictionary
-if "" in my_list.items:
-    my_list.delete_item("")
 
 # Print the updated list to the console
 my_list.print_list()
